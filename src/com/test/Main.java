@@ -103,8 +103,10 @@ public class Main {
         String str = "";
 
         try {
+            //equals 일때
             str = typeMap.get(request).apply(data1Param,data2Param);
         } catch (NullPointerException npe) {
+            //not equals 일때
             str = typeMap.get("notCompare").apply(data1Param,data2Param);
         }
 
